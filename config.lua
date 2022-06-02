@@ -20,7 +20,7 @@ Config = {
 
 --Shops = {
     Weedshop = {
-        { name = 'bong',   label = 'Bang',    price = 15 },
+        { name = 'bang',   label = 'Bang',    price = 15 },
     }
 
     Tabac = {

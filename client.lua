@@ -38,7 +38,7 @@ function OpenJobMenu(jobraw, job)
                 for k,v in pairs(jobraw) do
                     RageUI.ButtonWithStyle(v.label, nil, {RightLabel = v.price .. '$'}, true, function(Hovered, Active, Selected)
                         if (Selected) then
-                            TriggerServerEvent('esx_society:withdrawMoney', job, v.price)
+                            TriggerServerEvent('clk_societyshops:buy', job, v.price, v.name)
                         end
                     end)
                 end
@@ -67,7 +67,7 @@ Citizen.CreateThread(function()
                 RageUI.Text({ message = "Appuyez sur ~p~[E]~s~ pour accéder au menu", time_display = 1 })
                     if IsControlJustPressed(1,51) then           
                         --OpenJobMenu(Weedshop, 'Weedshop')
-                        OpenJobMenu(weedshop, 'weedshop')
+                        OpenJobMenu(Weedshop, 'Weedshop')
                     end   
             end
         end 
